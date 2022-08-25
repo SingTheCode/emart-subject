@@ -1,9 +1,13 @@
-import './App.css';
+import React from "react";
+import { RecoilRoot } from "recoil";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <RecoilRoot>
+      <div className="App"></div>
+    </RecoilRoot>
   );
 }
 
