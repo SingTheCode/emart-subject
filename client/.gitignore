@@ -22,8 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,react,cypressio,storybookjs
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,visualstudiocode,react,cypressio,storybookjs
+# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,react,storybookjs,cypressio
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,visualstudiocode,react,storybookjs,cypressio
 
 ### CypressIO ###
 # gitignore template for the CypressIO, browser test framework
@@ -140,4 +140,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,react,cypressio,storybookjs
+# End of https://www.toptal.com/developers/gitignore/api/macos,windows,visualstudiocode,react,storybookjs,cypressio
