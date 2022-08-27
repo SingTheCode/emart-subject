@@ -1,11 +1,4 @@
-import React from "react";
 import styled, { css } from "styled-components";
-
-interface TopMenuBtnProps {
-  content: string;
-  selected: boolean;
-  clickHandler: Function;
-}
 
 const defaultButton = css`
   padding: 6px 0;
@@ -26,14 +19,7 @@ const ClickButton = styled.button`
   font-weight: bold;
 `;
 
-const TopMenuBtn = ({ content, selected }: TopMenuBtnProps) => (
-  <>
-    {selected ? (
-      <ClickButton>{content}</ClickButton>
-    ) : (
-      <DefaultButton>{content}</DefaultButton>
-    )}
-  </>
-);
-
-export default TopMenuBtn;
+export default {
+  DefaultButton,
+  ClickButton,
+};

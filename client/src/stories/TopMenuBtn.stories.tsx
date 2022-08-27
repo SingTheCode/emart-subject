@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import TopMenuBtn from "../components/TopMenuBtn";
+import TopMenuBtn from "../components/atoms/TopMenuBtn/TopMenuBtn";
 
 export default {
   title: "Components/TopMenuBtn",

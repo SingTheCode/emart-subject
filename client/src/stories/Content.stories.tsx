@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Content from "../components/Content";
+import Content from "../components/atoms/Content/Content";
 
 export default {
   title: "Components/Content",
