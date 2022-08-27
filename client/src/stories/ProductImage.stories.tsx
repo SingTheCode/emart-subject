@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import ProductImage from "../components/ProductImage";
@@ -15,4 +14,4 @@ const Template: ComponentStory<typeof ProductImage> = (args) => (
   <ProductImage {...args} />
 );
 
-export const Basic = Template.bind({});
+export const Default = Template.bind({});
