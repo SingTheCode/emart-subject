@@ -27,6 +27,6 @@ const ClickedButton = styled.button`
 `;
 
 export default {
-  DefaultButton,
-  ClickButton,
+  UnClickedButton,
+  ClickedButton,
 };
