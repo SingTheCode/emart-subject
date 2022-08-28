@@ -8,32 +8,25 @@ interface TopMenuBtnProps {
 }
 
 const defaultButton = css`
-  padding: 6px 0;
-  margin: 0 6px;
+  padding: 0 0 7px;
+  margin: 0 20px 0 0;
   border-style: none;
   background-color: white;
+  font-size: 0.875rem;
 `;
 
-const DefaultButton = styled.button`
+const UnClickedButton = styled.button`
   ${defaultButton}
-  color: #6c6c6c;
+  color: #767676;
 `;
 
-const ClickButton = styled.button`
+const ClickedButton = styled.button`
   ${defaultButton}
   border-bottom: 2px solid black;
-  color: #201f1f;
   font-weight: bold;
 `;
 
-const TopMenuBtn = ({ content, selected }: TopMenuBtnProps) => (
-  <>
-    {selected ? (
-      <ClickButton>{content}</ClickButton>
-    ) : (
-      <DefaultButton>{content}</DefaultButton>
-    )}
-  </>
-);
-
-export default TopMenuBtn;
+export default {
+  DefaultButton,
+  ClickButton,
+};

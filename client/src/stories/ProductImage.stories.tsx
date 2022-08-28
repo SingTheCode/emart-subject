@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import ProductImage from "../components/ProductImage";
 
 export default {
-  title: "Components/ProductImage",
+  title: "Atoms/ProductImage",
   component: ProductImage,
   argTypes: {
     src: { control: "file", accept: ".png" },
