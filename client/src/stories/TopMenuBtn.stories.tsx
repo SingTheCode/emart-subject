@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import TopMenuBtn from "../components/TopMenuBtn";
 
 export default {
-  title: "Components/TopMenuBtn",
+  title: "Atoms/TopMenuBtn",
   component: TopMenuBtn,
   argTypes: {
     content: { control: "text" },
