@@ -1,12 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface TopMenuBtnProps {
-  content: string;
-  selected: boolean;
-  clickHandler: Function;
-}
-
 const defaultButton = css`
   padding: 0 0 7px;
   margin: 0 20px 0 0;

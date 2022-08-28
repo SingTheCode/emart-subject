@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ImageProps } from "../../../utils/types";
+import { ImageProps } from "utils/types";
 
 const ImageBox = styled.div`
   position: relative;
@@ -14,6 +14,7 @@ const ImageBox = styled.div`
 
 const Image = styled.img<ImageProps>`
   width: 100%;
+  border-radius: 10px;
 `;
 
 export default {

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { likeImg, talkBalloon } from "api/images/";
-
 const ProductBox = styled.div`
   display: flex;
   align-items: center;
