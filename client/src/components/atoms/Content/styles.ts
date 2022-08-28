@@ -1,12 +1,4 @@
-import React from "react";
 import styled, { css } from "styled-components";
-
-import { ContentState } from "../types/unions";
-
-type ContentProps = {
-  content?: string;
-  type: ContentState;
-};
 
 const defaultContent = css`
   width: max-content;
@@ -29,14 +21,7 @@ const DiscountContent = styled.span`
   color: #db392e;
 `;
 
-const Content = ({ content, type }: ContentProps) => (
-  <>
-    {type === "event" ? (
-      <EventContent>{content}</EventContent>
-    ) : (
-      <DiscountContent>{content}</DiscountContent>
-    )}
-  </>
-);
-
-export default Content;
+export default {
+  EventContent,
+  DiscountContent,
+};
