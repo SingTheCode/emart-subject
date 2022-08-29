@@ -3,19 +3,18 @@ import $ from "jquery";
 
 export const selectedMenuState = atom({
   key: "SelectedMenuState",
-  default: "",
+  default: "전체",
 });
 
 export const menuListSelector = selector({
-  key: "MenuListSelector",
+  key: "menuListSelector",
   get: async ({ get }) => {
     try {
       const response = await $.ajax({
         type: "get",
-        url: "../../api/menu.json",
+        url: "http://localhost:3001/menuList",
         dataType: "json",
       });
-      alert(response);
       return response;
     } catch (err) {
       console.log(err);

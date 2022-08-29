@@ -1,11 +1,7 @@
-import React from "react";
-
 import { ProductProps } from ".";
-import styles from "./styles";
 import ProductImage from "components/atoms/ProductImage/ProductImage";
 import Content from "components/atoms/Content/Content";
-import Like from "api/images/like.svg";
-import TalkBalloon from "api/images/talkBalloon.svg";
+import styles from "./styles";
 
 const Product = ({
   productImgSrc,
@@ -43,11 +39,11 @@ const Product = ({
       </styles.ProductBadge>
       <styles.FavoriteBox>
         <styles.Box>
-          <styles.FavoriteImg src={Like} />
+          <styles.FavoriteImg src="assets/like.svg" />
           <styles.Count>{like}</styles.Count>
         </styles.Box>
         <styles.Box>
-          <styles.FavoriteImg src={TalkBalloon} />
+          <styles.FavoriteImg src="assets/talkBalloon.svg" />
           <styles.Count>{review}</styles.Count>
         </styles.Box>
       </styles.FavoriteBox>
