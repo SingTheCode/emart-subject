@@ -16,8 +16,7 @@ const TopMenuBarContainer = () => {
 
   const menuClickHandler = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement;
-    alert(target.value);
-    setSelectedMenu(target.value);
+    setSelectedMenu(target.outerText);
   };
 
   return (
