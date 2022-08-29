@@ -1,7 +1,6 @@
-import React from "react";
 import { useRecoilValue } from "recoil";
 
-import { selectedMenuState } from "../../../store/menu";
+import { selectedMenuState } from "store/menu";
 import Product from "./Product";
 
 export type ProductProps = {
@@ -13,7 +12,7 @@ export type ProductProps = {
   eventContent?: string[];
   discountContent?: string[];
   like: number;
-  review: number;
+  review?: number;
 };
 
 const ProductContainer = ({
@@ -31,7 +30,7 @@ const ProductContainer = ({
 
   return (
     <>
-      {type === selectMenu && (
+      {(type === selectMenu || type === "전체") && (
         <Product
           productImgSrc={productImgSrc}
           previousPrice={previousPrice}
