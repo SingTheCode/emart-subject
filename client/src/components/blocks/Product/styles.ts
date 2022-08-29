@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+import { ImageProps } from "utils/types";
+
 const ProductBox = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 120px;
   padding: 0 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 `;
 
 const BoxInfo = styled.div`
@@ -17,9 +19,12 @@ const BoxInfo = styled.div`
   padding-left: 20px;
   font-family: Roboto;
 `;
-
+const PriceBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const PreviousPrice = styled.div`
-  padding-bottom: 2px;
+  padding: 0 4px 2px 0;
   color: #767676;
   font-size: 0.875rem;
   font-weight: 500;
@@ -42,9 +47,15 @@ const ProductBadge = styled.div`
   padding-top: 2px;
 `;
 
+const ContentBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const FavoriteBox = styled.div`
   display: flex;
-  padding-top: 20px;
+  align-items: center;
+  padding-top: 10px;
 `;
 
 const Box = styled.div`
@@ -52,16 +63,14 @@ const Box = styled.div`
   padding-right: 20px;
 `;
 
-const LikeImg = styled.img`
-  width: 17px;
-  height: 14px;
+const FavoriteImg = styled.img<ImageProps>`
+  position: relative;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  object-position: 0 3px;
   padding-right: 4px;
-  content: url();
-`;
-
-const TalkBallonImg = styled.img`
-  padding-right: 4px;
-  content: url(api/images/talkBallon.svg);
 `;
 
 const Count = styled.span`
@@ -72,13 +81,14 @@ const Count = styled.span`
 export default {
   ProductBox,
   BoxInfo,
+  PriceBox,
   PreviousPrice,
   Price,
   Title,
   ProductBadge,
+  ContentBox,
   FavoriteBox,
   Box,
-  LikeImg,
-  TalkBallonImg,
+  FavoriteImg,
   Count,
 };
