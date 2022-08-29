@@ -2,21 +2,22 @@ import styled, { css } from "styled-components";
 
 const defaultContent = css`
   width: max-content;
-  padding: 2px;
+  padding: 0 4px;
+  margin: 0 3px 2px 0;
   border-radius: 3px;
-  font-size: smaller;
+  font-size: 0.688rem;
 `;
 
-const EventContent = styled.p`
+const EventContent = styled.span`
   ${defaultContent}
-  border: 1px solid #3e6ac7;
-  color: #3e6ac7;
+  border: 1px solid #4774cf;
+  color: #4774cf;
 `;
 
-const DiscountContent = styled.p`
+const DiscountContent = styled.span`
   ${defaultContent}
-  border: 1px solid #d6322a;
-  color: #d6322a;
+  border: 1px solid #db392e;
+  color: #db392e;
 `;
 
 export default {

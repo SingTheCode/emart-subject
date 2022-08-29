@@ -5,21 +5,21 @@ const defaultButton = css`
   margin: 0 6px;
   border-style: none;
   background-color: white;
+  font-size: 0.875rem;
 `;
 
-const DefaultButton = styled.button`
+const UnClickedButton = styled.button`
   ${defaultButton}
-  color: #6c6c6c;
+  color: #767676;
 `;
 
-const ClickButton = styled.button`
+const ClickedButton = styled.button`
   ${defaultButton}
-  border-bottom: 2px solid black;
-  color: #201f1f;
-  font-weight: bold;
+  border-bottom: 2px solid;
+  font-weight: 700;
 `;
 
 export default {
-  DefaultButton,
-  ClickButton,
+  UnClickedButton,
+  ClickedButton,
 };

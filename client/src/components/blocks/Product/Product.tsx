@@ -22,7 +22,7 @@ const Product = ({
         {previousPrice && (
           <styles.PreviousPrice>{previousPrice}</styles.PreviousPrice>
         )}
-        {price && <styles.Price>{price}</styles.Price>}
+        {price && <styles.Price>{price}원</styles.Price>}
         <styles.Title>{title}</styles.Title>
         <styles.ProductBadge>
           {eventContent &&
