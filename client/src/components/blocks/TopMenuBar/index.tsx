@@ -21,13 +21,11 @@ const TopMenuBarContainer = () => {
   };
 
   return (
-    <>
-      <TopMenuBar
-        menuList={menuList}
-        selectedMenu={selectedMenu}
-        clickHandler={menuClickHandler}
-      />
-    </>
+    <TopMenuBar
+      menuList={menuList}
+      selectedMenu={selectedMenu}
+      clickHandler={menuClickHandler}
+    />
   );
 };
 

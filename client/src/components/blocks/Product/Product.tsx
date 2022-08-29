@@ -15,7 +15,6 @@ const Product = ({
   like,
   review,
 }: ProductProps) => (
-  <>
     <styles.ProductBox>
       <ProductImage src={productImgSrc} />
       <styles.BoxInfo>
@@ -46,7 +45,6 @@ const Product = ({
         </styles.FavoriteBox>
       </styles.BoxInfo>
     </styles.ProductBox>
-  </>
 );
 
 export default Product;
