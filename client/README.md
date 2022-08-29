@@ -42,4 +42,4 @@
 
 ## 구현 예시
 
-<img src="https://user-images.githubusercontent.com/65025333/186651794-aac0a92e-20d7-41b3-88fe-203c27b9c7cf.jpeg" alt="구현 예시" width="300px" />
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/65025333/187199653-c2a7c948-2b9c-4a49-8a1d-6fccaa8db50a.png">
