@@ -13,13 +13,11 @@ const TopMenuBtnContainer = ({
   selected,
   clickHandler,
 }: TopMenuBtnProps) => (
-  <>
-    <TopMenuBtn
-      content={content}
-      selected={selected}
-      clickHandler={clickHandler}
-    />
-  </>
+  <TopMenuBtn
+    content={content}
+    selected={selected}
+    clickHandler={clickHandler}
+  />
 );
 
 export default TopMenuBtnContainer;

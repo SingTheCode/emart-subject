@@ -6,7 +6,6 @@ const defaultContent = css`
   margin: 0 3px 2px 0;
   border-radius: 3px;
   font-size: 0.688rem;
-  white-space: nowrap;
 `;
 
 const EventContent = styled.span`

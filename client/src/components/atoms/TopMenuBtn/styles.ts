@@ -1,9 +1,8 @@
-import React from "react";
 import styled, { css } from "styled-components";
 
 const defaultButton = css`
-  padding: 0 0 7px;
-  margin: 0 20px 0 0;
+  padding: 6px 0;
+  margin: 0 6px;
   border-style: none;
   background-color: white;
   font-size: 0.875rem;
@@ -16,8 +15,8 @@ const UnClickedButton = styled.button`
 
 const ClickedButton = styled.button`
   ${defaultButton}
-  border-bottom: 2px solid black;
-  font-weight: bold;
+  border-bottom: 2px solid;
+  font-weight: 700;
 `;
 
 export default {

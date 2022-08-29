@@ -15,6 +15,7 @@ const BoxInfo = styled.div`
   justify-content: space-evenly;
   width: 100%;
   padding-left: 20px;
+  font-family: Roboto;
 `;
 
 const PreviousPrice = styled.div`
@@ -38,12 +39,12 @@ const Title = styled.p`
 
 const ProductBadge = styled.div`
   display: block;
-  padding-top: 5px;
+  padding-top: 2px;
 `;
 
 const FavoriteBox = styled.div`
   display: flex;
-  padding-top: 5px;
+  padding-top: 20px;
 `;
 
 const Box = styled.div`
