@@ -1,9 +1,9 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import TopMenuBtn from "../components/atoms/TopMenuBtn/TopMenuBtn";
+import TopMenuBtn from "components/atoms/TopMenuBtn/TopMenuBtn";
 
 export default {
-  title: "Components/TopMenuBtn",
+  title: "Atoms/TopMenuBtn",
   component: TopMenuBtn,
   argTypes: {
     content: { control: "text" },

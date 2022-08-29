@@ -1,11 +1,12 @@
 import React from "react";
 
 import styles from "./styles";
+import { ImageProps } from "utils/types";
 
-export type ImageProps = {
-  src: string;
-};
-
-const ProductImage = ({ src }: ImageProps) => <styles.Image src={src} />;
+const ProductImage = ({ src }: ImageProps) => (
+  <styles.ImageBox>
+    <styles.Image src={src} />
+  </styles.ImageBox>
+);
 
 export default ProductImage;

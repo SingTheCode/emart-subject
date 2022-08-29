@@ -1,19 +1,16 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
+import { TopMenuBtnProps } from ".";
 import styles from "./styles";
 
-interface TopMenuBtnProps {
-  content: string;
-  selected: boolean;
-  clickHandler: Function;
-}
-
-const TopMenuBtn = ({ content, selected }: TopMenuBtnProps) => (
+const TopMenuBtn = ({ content, selected, clickHandler }: TopMenuBtnProps) => (
   <>
     {selected ? (
-      <styles.ClickButton>{content}</styles.ClickButton>
+      <styles.ClickedButton onClick={clickHandler}>{content}</styles.ClickedButton>
     ) : (
-      <styles.DefaultButton>{content}</styles.DefaultButton>
+      <styles.UnClickedButton onClick={clickHandler}>
+        {content}
+      </styles.UnClickedButton>
     )}
   </>
 );

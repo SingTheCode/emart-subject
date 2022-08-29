@@ -1,9 +1,8 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Content from "../components/atoms/Content/Content";
-
+import Content from "components/atoms/Content/Content";
 export default {
-  title: "Components/Content",
+  title: "Atoms/Content",
   component: Content,
   argTypes: {
     content: { control: "text" },

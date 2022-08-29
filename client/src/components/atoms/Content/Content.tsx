@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./styles";
-import { ContentState } from "../../../utils/types/unions";
+import { ContentState } from "utils/unions";
 
 type ContentProps = {
   content?: string;
