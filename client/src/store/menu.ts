@@ -13,8 +13,9 @@ export const menuListSelector = selector({
     try {
       const response = await $.ajax({
         type: "get",
-        url: "http://localhost:3001/menuList",
+        url: `${process.env.REACT_APP_API}/menu/list`,
         dataType: "json",
+        success: (data) => console.log(data),
       });
       return response;
     } catch (err) {

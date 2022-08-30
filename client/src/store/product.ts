@@ -1,4 +1,4 @@
-import { getProductList } from "./../api/product";
+import { getProductList } from "api/product";
 import { atom, selector } from "recoil";
 
 import { selectedMenuState } from "./menu";

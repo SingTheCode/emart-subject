@@ -1,10 +1,4 @@
-import {
-  RefObject,
-  Suspense,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { RefObject, Suspense, useEffect, useRef, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 
 import { ProductProps } from "components/blocks/Product/Product";
