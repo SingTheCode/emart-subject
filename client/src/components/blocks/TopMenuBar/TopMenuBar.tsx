@@ -8,15 +8,16 @@ const TopMenuBar = ({
   menuList,
   selectedMenu,
   clickHandler,
+  scrollType,
 }: TopMenuBarProps) => {
   return (
-    <styles.MenuBar>
-      {menuList.map((menu, idx) => (
+    <styles.MenuBar scrollType={scrollType}>
+      {menuList!.map((menu, idx) => (
         <TopMenuBtn
           key={idx}
           content={menu}
           selected={selectedMenu === menu}
-          clickHandler={clickHandler}
+          clickHandler={clickHandler!}
         />
       ))}
     </styles.MenuBar>
