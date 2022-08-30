@@ -1,7 +1,17 @@
-import { ProductProps } from ".";
 import ProductImage from "components/atoms/ProductImage/ProductImage";
 import Content from "components/atoms/Content/Content";
 import styles from "./styles";
+
+export interface ProductProps {
+  productImgSrc: string;
+  previousPrice?: string;
+  price?: string;
+  title: string;
+  eventContent?: string[];
+  discountContent?: string[];
+  like: number;
+  review?: number;
+}
 
 const Product = ({
   productImgSrc,

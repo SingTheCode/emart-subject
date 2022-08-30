@@ -1,3 +1,1 @@
-export type ImageProps = {
-  src: string;
-};
+export type ContentState = "event" | "discount";

@@ -1,18 +1,18 @@
 import { Suspense } from "react";
 import { useRecoilValue } from "recoil";
 
+import { ProductProps } from "components/blocks/Product/Product";
 import { productListSelector } from "store/product";
-import { ProductProps } from "components/blocks/Product";
 import Home from "./Home";
 
-export type HomeProps = {
+export interface HomeProps {
   productList: ProductProps[];
-};
+}
 
 const HomePage = () => {
-  const productList = useRecoilValue(productListSelector);
-  
-  return <Home productList={productList} />;
+  const pagenation = useRecoilValue(productListSelector);
+
+  return <Home productList={pagenation.contents} />;
 };
 
 const HomeContainer = () => (
