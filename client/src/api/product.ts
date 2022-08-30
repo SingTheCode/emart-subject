@@ -11,5 +11,5 @@ export const getProductList = async (type: MenuList, pageNumber: number) => {
     success: (data) => console.log(data),
   });
 
-  return response[0];
+  return response;
 };
