@@ -5,10 +5,22 @@ import { ImageProps } from "utils/interfaces";
 const ProductBox = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
   padding: 0 20px;
   margin-bottom: 20px;
+  float: left;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 30%;
+  }
 `;
 
 const BoxInfo = styled.div`
