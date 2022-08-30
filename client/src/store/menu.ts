@@ -1,6 +1,7 @@
-import { MenuList } from "utils/types";
 import { atom, selector } from "recoil";
 import $ from "jquery";
+
+import { MenuList } from "utils/types";
 
 export const selectedMenuState = atom<MenuList>({
   key: "SelectedMenuState",

@@ -1,6 +1,6 @@
-import { getProductList } from "api/product";
 import { atom, selector } from "recoil";
 
+import { getProductList } from "api/product";
 import { selectedMenuState } from "./menu";
 import { PaginationResponse } from "utils/interfaces";
 

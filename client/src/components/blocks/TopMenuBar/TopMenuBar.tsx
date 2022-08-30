@@ -1,7 +1,7 @@
 import React from "react";
 
 import { TopMenuBarProps } from ".";
-import TopMenuBtn from "../../atoms/TopMenuBtn/TopMenuBtn";
+import TopMenuBtn from "components/atoms/TopMenuBtn/TopMenuBtn";
 import styles from "./styles";
 
 const TopMenuBar = ({
