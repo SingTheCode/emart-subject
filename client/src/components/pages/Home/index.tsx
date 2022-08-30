@@ -4,6 +4,7 @@ import { useRecoilValue } from "recoil";
 import { ProductProps } from "components/blocks/Product/Product";
 import { productListSelector } from "store/product";
 import Home from "./Home";
+import Loading from "components/atoms/Loading/Loading";
 
 export interface HomeProps {
   productList: ProductProps[];
@@ -16,7 +17,7 @@ const HomePage = () => {
 };
 
 const HomeContainer = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Loading />}>
     <HomePage />
   </Suspense>
 );
