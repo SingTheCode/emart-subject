@@ -17,8 +17,13 @@ const ProductList = styled.div`
   padding-top: 48px;
 `;
 
+const Target = styled.div`
+  height: 1px;
+`;
+
 export default {
   HomePage,
   Title,
   ProductList,
+  Target,
 };

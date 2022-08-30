@@ -4,7 +4,7 @@ import TopNavBar from "components/blocks/TopNavBar/TopNavBar";
 import { HomeProps } from ".";
 import styles from "./styles";
 
-const Home = ({ productList }: HomeProps) => {
+const Home = ({ productList, forwardRef }: HomeProps) => {
   return (
     <>
       <TopNavBar />
@@ -40,6 +40,7 @@ const Home = ({ productList }: HomeProps) => {
             )
           )}
         </styles.ProductList>
+        <styles.Target ref={forwardRef} />
       </styles.HomePage>
     </>
   );
