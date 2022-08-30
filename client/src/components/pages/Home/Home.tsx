@@ -1,10 +1,10 @@
 import TopMenuBarContainer from "components/blocks/TopMenuBar";
-import ProductContainer from "components/blocks/Product";
+import Product from "components/blocks/Product/Product";
 import TopNavBar from "components/blocks/TopNavBar/TopNavBar";
 import { HomeProps } from ".";
 import styles from "./styles";
 
-const Home = ({ productList }: HomeProps) => {
+const Home = ({ productList, forwardRef }: HomeProps) => {
   return (
     <>
       <TopNavBar />
@@ -15,7 +15,6 @@ const Home = ({ productList }: HomeProps) => {
           {productList.map(
             (
               {
-                type,
                 productImgSrc,
                 previousPrice,
                 price,
@@ -27,9 +26,8 @@ const Home = ({ productList }: HomeProps) => {
               },
               idx
             ) => (
-              <ProductContainer
+              <Product
                 key={idx}
-                type={type}
                 productImgSrc={productImgSrc}
                 previousPrice={previousPrice}
                 price={price}
@@ -42,6 +40,7 @@ const Home = ({ productList }: HomeProps) => {
             )
           )}
         </styles.ProductList>
+        <styles.Target ref={forwardRef} />
       </styles.HomePage>
     </>
   );

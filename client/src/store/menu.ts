@@ -1,7 +1,8 @@
+import { MenuList } from "utils/types";
 import { atom, selector } from "recoil";
 import $ from "jquery";
 
-export const selectedMenuState = atom({
+export const selectedMenuState = atom<MenuList>({
   key: "SelectedMenuState",
   default: "전체",
 });

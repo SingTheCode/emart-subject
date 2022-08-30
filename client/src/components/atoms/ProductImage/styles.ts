@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { ImageProps } from "utils/types";
+import { ImageProps } from "utils/interfaces";
 
 const ImageBox = styled.div`
   position: relative;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./styles";
-import { ImageProps } from "utils/types";
+import { ImageProps } from "utils/interfaces";
 
 const ProductImage = ({ src }: ImageProps) => (
   <styles.ImageBox>

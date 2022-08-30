@@ -1,5 +1,6 @@
-import { ImageProps } from "utils/types";
 import styled from "styled-components";
+
+import { ImageProps } from "utils/interfaces";
 
 const NavBar = styled.div`
   position: absolute;

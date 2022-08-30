@@ -1,7 +1,17 @@
-import { ProductProps } from ".";
 import ProductImage from "components/atoms/ProductImage/ProductImage";
 import Content from "components/atoms/Content/Content";
 import styles from "./styles";
+
+export interface ProductProps {
+  productImgSrc: string;
+  previousPrice?: string;
+  price?: string;
+  title: string;
+  eventContent?: string[];
+  discountContent?: string[];
+  like: number;
+  review?: number;
+}
 
 const Product = ({
   productImgSrc,
@@ -26,14 +36,14 @@ const Product = ({
       <styles.ProductBadge>
         <styles.ContentBox>
           {eventContent &&
-            eventContent.map((content) => (
-              <Content content={content} type="event" />
+            eventContent.map((content, idx) => (
+              <Content key={idx} content={content} type="event" />
             ))}
         </styles.ContentBox>
         <styles.ContentBox>
           {discountContent &&
-            discountContent.map((content) => (
-              <Content content={content} type="discount" />
+            discountContent.map((content, idx) => (
+              <Content key={idx} content={content} type="discount" />
             ))}
         </styles.ContentBox>
       </styles.ProductBadge>
