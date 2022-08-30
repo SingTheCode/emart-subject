@@ -2,6 +2,7 @@ import React, { MouseEventHandler } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 
 import { menuListSelector, selectedMenuState } from "store/menu";
+import { MenuList } from "utils/types";
 import TopMenuBar from "./TopMenuBar";
 
 export interface TopMenuBarProps {
@@ -16,7 +17,7 @@ const TopMenuBarContainer = () => {
 
   const menuClickHandler = (e: React.MouseEvent) => {
     const target = e.target as HTMLButtonElement;
-    setSelectedMenu(target.outerText);
+    setSelectedMenu(target.outerText as MenuList);
   };
 
   return (
