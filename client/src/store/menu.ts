@@ -15,7 +15,6 @@ export const menuListSelector = selector({
         type: "get",
         url: `${process.env.REACT_APP_API}/menu/list`,
         dataType: "json",
-        success: (data) => console.log(data),
       });
       return response;
     } catch (err) {

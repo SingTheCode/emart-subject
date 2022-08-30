@@ -27,7 +27,6 @@ const TopMenuBarContainer = () => {
   const scrollHandler = () => {
     let scrollTop = document.documentElement.scrollTop;
     if (window.scrollY > 132) {
-      console.log(scrollTop, lastScroll);
       if (scrollTop > lastScroll) {
         lastScroll = scrollTop;
         setScrollType("scrollDown");

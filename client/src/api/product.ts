@@ -8,7 +8,6 @@ export const getProductList = async (type: MenuList, pageNumber: number) => {
     type: "get",
     contentType: "application/x-www-form-urlencoded; charset=euc-kr",
     dataType: "json",
-    success: (data) => console.log(data),
   });
 
   return response;
