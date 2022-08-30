@@ -36,14 +36,14 @@ const Product = ({
       <styles.ProductBadge>
         <styles.ContentBox>
           {eventContent &&
-            eventContent.map((content) => (
-              <Content content={content} type="event" />
+            eventContent.map((content, idx) => (
+              <Content key={idx} content={content} type="event" />
             ))}
         </styles.ContentBox>
         <styles.ContentBox>
           {discountContent &&
-            discountContent.map((content) => (
-              <Content content={content} type="discount" />
+            discountContent.map((content, idx) => (
+              <Content key={idx} content={content} type="discount" />
             ))}
         </styles.ContentBox>
       </styles.ProductBadge>
