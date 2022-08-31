@@ -65,13 +65,10 @@ const ProductListBox = () => {
   }, [lastIntersectingProduct]);
 
   return (
-    <>
       <ProductList
         productList={productList}
         forwardRef={setLastIntersectProduct}
       />
-      {console.log(productList)}
-    </>
   );
 };
 
