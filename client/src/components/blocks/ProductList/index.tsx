@@ -1,22 +1,22 @@
 import { RefObject, Suspense, useEffect, useRef, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 
+import Loading from "components/atoms/Loading/Loading";
 import { ProductProps } from "components/blocks/Product/Product";
 import {
   getChangedMenuProductListSelector,
   productListSelector,
   productPageState,
 } from "store/product";
-import Home from "./Home";
-import Loading from "components/atoms/Loading/Loading";
 import { selectedMenuState } from "store/menu";
+import ProductList from "./ProductList";
 
-export interface HomeProps {
+export interface ProductListProps {
   productList: ProductProps[];
   forwardRef: RefObject<HTMLDivElement>;
 }
 
-const HomePage = () => {
+const ProductListBox = () => {
   const menuChangedPagination = useRecoilValue(
     getChangedMenuProductListSelector
   );
@@ -63,13 +63,13 @@ const HomePage = () => {
     setProductList(menuChangedPagination.contents);
   }, [menu]);
 
-  return <Home productList={productList} forwardRef={observeRef} />;
+  return <ProductList productList={productList} forwardRef={observeRef} />;
 };
 
-const HomeContainer = () => (
+const ProductListContainer = () => (
   <Suspense fallback={<Loading />}>
-    <HomePage />
+    <ProductListBox />
   </Suspense>
 );
 
-export default HomeContainer;
+export default ProductListContainer;

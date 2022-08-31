@@ -1,8 +1,7 @@
-import React from "react";
 import { RecoilRoot } from "recoil";
 
-import HomeContainer from "components/pages/Home";
 import { worker } from "mocks/browser";
+import Home from "components/pages/Home/Home";
 
 worker.start();
 
@@ -10,7 +9,7 @@ function App() {
   return (
     <RecoilRoot>
       <div className="App">
-        <HomeContainer />
+        <Home />
       </div>
     </RecoilRoot>
   );
