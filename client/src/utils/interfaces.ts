@@ -10,10 +10,10 @@ export interface menuList {
 }
 
 export interface PaginationResponse {
-  contents: ProductProps[];
-  pageNumber: number;
-  pageSize: number;
-  totalCount: number;
-  isLastPage: boolean;
-  isFirstPage: boolean;
+  contents?: ProductProps[];
+  pageNumber?: number;
+  pageSize?: number;
+  totalCount?: number;
+  isLastPage?: boolean;
+  isFirstPage?: boolean;
 }

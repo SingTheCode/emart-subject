@@ -1,5 +1,3 @@
-import React, { MouseEventHandler } from "react";
-
 import { TopMenuBtnProps } from ".";
 import styles from "./styles";
 

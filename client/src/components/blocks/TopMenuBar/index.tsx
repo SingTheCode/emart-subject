@@ -39,7 +39,7 @@ const TopMenuBarContainer = () => {
     }
   };
 
-  const throttledHandler = _.throttle(scrollHandler, 500);
+  const throttledHandler = _.throttle(scrollHandler, 200);
 
   useEffect(() => {
     const scrollEventListener = () => {

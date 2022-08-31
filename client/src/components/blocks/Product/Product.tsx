@@ -1,6 +1,7 @@
 import ProductImage from "components/atoms/ProductImage/ProductImage";
 import Content from "components/atoms/Content/Content";
 import styles from "./styles";
+import { Dispatch } from "react";
 
 export interface ProductProps {
   productImgSrc: string;
@@ -11,6 +12,7 @@ export interface ProductProps {
   discountContent?: string[];
   like: number;
   review?: number;
+  forwardRef?: Dispatch<React.SetStateAction<HTMLDivElement | null>>;
 }
 
 const Product = ({
@@ -22,8 +24,9 @@ const Product = ({
   discountContent,
   like,
   review,
+  forwardRef,
 }: ProductProps) => (
-  <styles.ProductBox>
+  <styles.ProductBox ref={forwardRef}>
     <ProductImage src={productImgSrc} />
     <styles.BoxInfo>
       <styles.PriceBox>
