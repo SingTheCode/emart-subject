@@ -19,22 +19,39 @@ const ProductList = ({ productList, forwardRef }: ProductListProps) => {
               review,
             },
             idx
-          ) => (
-            <Product
-              key={idx}
-              productImgSrc={productImgSrc}
-              previousPrice={previousPrice}
-              price={price}
-              title={title}
-              eventContent={eventContent}
-              discountContent={discountContent}
-              like={like}
-              review={review}
-            />
-          )
+          ) => {
+            if (idx === productList.length - 1) {
+              return (
+                <Product
+                  key={idx}
+                  productImgSrc={productImgSrc}
+                  previousPrice={previousPrice}
+                  price={price}
+                  title={title}
+                  eventContent={eventContent}
+                  discountContent={discountContent}
+                  like={like}
+                  review={review}
+                  forwardRef={forwardRef}
+                />
+              );
+            }
+            return (
+              <Product
+                key={idx}
+                productImgSrc={productImgSrc}
+                previousPrice={previousPrice}
+                price={price}
+                title={title}
+                eventContent={eventContent}
+                discountContent={discountContent}
+                like={like}
+                review={review}
+              />
+            );
+          }
         )}
       </styles.ProductList>
-      <styles.Target ref={forwardRef} />
     </>
   );
 };

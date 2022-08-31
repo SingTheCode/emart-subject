@@ -1,69 +1,78 @@
-import { RefObject, Suspense, useEffect, useRef, useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { Dispatch, Suspense, useEffect, useState } from "react";
+import $ from "jquery";
 
 import Loading from "components/atoms/Loading/Loading";
 import { ProductProps } from "components/blocks/Product/Product";
-import {
-  getChangedMenuProductListSelector,
-  productListSelector,
-  productPageState,
-} from "store/product";
-import { selectedMenuState } from "store/menu";
 import ProductList from "./ProductList";
+import { MenuList } from "utils/types";
+import { selectedMenuState } from "store/menu";
+import { useRecoilValue } from "recoil";
 
 export interface ProductListProps {
   productList: ProductProps[];
-  forwardRef: RefObject<HTMLDivElement>;
+  forwardRef: Dispatch<React.SetStateAction<HTMLDivElement | null>>;
 }
 
 const ProductListBox = () => {
-  const menuChangedPagination = useRecoilValue(
-    getChangedMenuProductListSelector
-  );
-  const pagination = useRecoilValue(productListSelector);
-  const [page, setPage] = useRecoilState(productPageState);
-  const menu = useRecoilValue(selectedMenuState);
   const [productList, setProductList] = useState<ProductProps[]>([]);
+  const menu = useRecoilValue(selectedMenuState);
+  const [page, setPage] = useState(1);
+  const [lastIntersectingProduct, setLastIntersectProduct] =
+    useState<HTMLDivElement | null>(null);
 
-  const preventRef = useRef(true);
-  const observeRef = useRef<HTMLDivElement>(null);
-  const endRef = useRef(false);
-
-  const obsHandler = (entries: any) => {
-    const target = entries[0];
-    if (!endRef.current && target.isIntersecting && preventRef.current) {
-      preventRef.current = false;
-      setPage((prev) => prev + 1);
+  const getProductList = async (type: MenuList, pageNumber: number) => {
+    try {
+      const response = await $.ajax({
+        url: `${process.env.REACT_APP_API}/product/list?type=${type}&pageNumber=${pageNumber}`,
+        type: "get",
+        contentType: "application/x-www-form-urlencoded; charset=euc-kr",
+        dataType: "json",
+      });
+      if (page === 1) {
+        setProductList([...response.contents]);
+      } else {
+        setProductList([...productList, ...response.contents]);
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(obsHandler);
-    if (observeRef.current) observer.observe(observeRef.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const onIntersect: IntersectionObserverCallback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setPage((prev) => prev + 1);
+        observer.unobserve(entry.target);
+      }
+    });
+  };
 
   useEffect(() => {
-    if (page === 1 && preventRef.current === false) return;
-    if (pagination.isLastPage) {
-      endRef.current = true;
-    }
-    setProductList((prev) => [...prev, ...pagination.contents]);
+    setPage(1);
+  }, [menu]);
+
+  useEffect(() => {
+    getProductList(menu, page);
   }, [page]);
 
   useEffect(() => {
-    preventRef.current = true;
-  }, [productList]);
+    let observer: IntersectionObserver;
+    if (lastIntersectingProduct) {
+      observer = new IntersectionObserver(onIntersect, { threshold: 0.5 });
+      observer.observe(lastIntersectingProduct);
+    }
+    return () => observer && observer.disconnect();
+  }, [lastIntersectingProduct]);
 
-  useEffect(() => {
-    endRef.current = false;
-    setPage(1);
-    setProductList(menuChangedPagination.contents);
-  }, [menu]);
-
-  return <ProductList productList={productList} forwardRef={observeRef} />;
+  return (
+    <>
+      <ProductList
+        productList={productList}
+        forwardRef={setLastIntersectProduct}
+      />
+      {console.log(productList)}
+    </>
+  );
 };
 
 const ProductListContainer = () => (
