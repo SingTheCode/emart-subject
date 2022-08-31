@@ -28,7 +28,7 @@ const ProductListBox = () => {
         contentType: "application/x-www-form-urlencoded; charset=euc-kr",
         dataType: "json",
       });
-      if (page === 1) {
+      if (pageNumber === 1) {
         setProductList([...response.contents]);
       } else {
         setProductList([...productList, ...response.contents]);
@@ -49,6 +49,7 @@ const ProductListBox = () => {
 
   useEffect(() => {
     setPage(1);
+    getProductList(menu, page);
   }, [menu]);
 
   useEffect(() => {
@@ -65,10 +66,10 @@ const ProductListBox = () => {
   }, [lastIntersectingProduct]);
 
   return (
-      <ProductList
-        productList={productList}
-        forwardRef={setLastIntersectProduct}
-      />
+    <ProductList
+      productList={productList}
+      forwardRef={setLastIntersectProduct}
+    />
   );
 };
 

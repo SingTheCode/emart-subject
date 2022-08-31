@@ -14,7 +14,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/oil.png",
                 previousPrice: "16,980/6,980",
-                price: "13,584/5,584",
+                price: "1",
                 title: "자연주의 유기농 참기름/볶음참깨",
                 eventContent: null,
                 discountContent: ["신세계포인트 적립 시 20% 할인"],
@@ -127,7 +127,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/oil.png",
                 previousPrice: "16,980/6,980",
-                price: "13,584/5,584",
+                price: "2",
                 title: "자연주의 유기농 참기름/볶음참깨",
                 eventContent: null,
                 discountContent: ["신세계포인트 적립 시 20% 할인"],
@@ -240,7 +240,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/amond.png",
                 previousPrice: null,
-                price: null,
+                price: "3",
                 title: "HBAF 시즈닝 아몬드/믹스넛/땅콩/병아리콩",
                 eventContent: ["※동일가격 교차구매 가능 1+1", "1+1"],
                 discountContent: null,
@@ -355,7 +355,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/amond.png",
                 previousPrice: null,
-                price: null,
+                price: "1",
                 title: "HBAF 시즈닝 아몬드/믹스넛/땅콩/병아리콩",
                 eventContent: ["※동일가격 교차구매 가능 1+1", "1+1"],
                 discountContent: null,
@@ -469,7 +469,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/amond.png",
                 previousPrice: null,
-                price: null,
+                price: "2",
                 title: "HBAF 시즈닝 아몬드/믹스넛/땅콩/병아리콩",
                 eventContent: ["※동일가격 교차구매 가능 1+1", "1+1"],
                 discountContent: null,
@@ -584,7 +584,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/oil.png",
                 previousPrice: "16,980/6,980",
-                price: "13,584/5,584",
+                price: "1",
                 title: "자연주의 유기농 참기름/볶음참깨",
                 eventContent: null,
                 discountContent: ["신세계포인트 적립 시 20% 할인"],
@@ -697,7 +697,7 @@ export const getProductList = rest.get(
               {
                 productImgSrc: "images/oil.png",
                 previousPrice: "16,980/6,980",
-                price: "13,584/5,584",
+                price: "2",
                 title: "자연주의 유기농 참기름/볶음참깨",
                 eventContent: null,
                 discountContent: ["신세계포인트 적립 시 20% 할인"],
