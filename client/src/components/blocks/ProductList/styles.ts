@@ -6,11 +6,6 @@ const ProductList = styled.div`
   overflow: hidden;
 `;
 
-const Target = styled.div`
-  height: 1px;
-`;
-
 export default {
   ProductList,
-  Target,
 };

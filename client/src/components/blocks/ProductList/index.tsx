@@ -1,4 +1,5 @@
 import { Dispatch, Suspense, useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
 import $ from "jquery";
 
 import Loading from "components/atoms/Loading/Loading";
@@ -6,7 +7,6 @@ import { ProductProps } from "components/blocks/Product/Product";
 import ProductList from "./ProductList";
 import { MenuList } from "utils/types";
 import { selectedMenuState } from "store/menu";
-import { useRecoilValue } from "recoil";
 
 export interface ProductListProps {
   productList: ProductProps[];
