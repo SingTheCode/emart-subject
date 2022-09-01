@@ -20,7 +20,7 @@
 
 ### 디렉토리 구조
 
-<img src="/Users/singco/Library/Application Support/typora-user-images/image-20220901183815984.png" alt="image-20220901183815984" style="zoom:50%;" />
+<img width="241" alt="image-20220901183815984" src="https://user-images.githubusercontent.com/65025333/187889803-2030ba53-f800-4194-8673-3a265f475fb9.png">
 
 ### 디자인 패턴
 
@@ -75,3 +75,7 @@ Recoil
 브랜치 전략
 
 - GitHub Flow를 적용하여 브랜치를 관리하였고, 브랜치 이름은 `[목적]/Issue-[이슈 발행 시 숫자]` 를 적용하였습니다.
+
+커밋 컨벤션
+
+- Udacity의 커밋 컨벤션을 참고해 적용하였습니다.
